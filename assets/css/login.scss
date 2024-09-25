@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url(../fonts/MontserratAlternates-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Montserrat Alternates";
+    src: url(../fonts/MontserratAlternates-Bold.ttf);
+  }
+  @font-face {
+    font-family: "Montserrat Alternates";
+    src: url(../fonts/MontserratAlternates-ExtraBold.ttf);
+  }
+  @font-face {
+    font-family: "Montserrat Alternates";
+    src: url(../fonts/MontserratAlternates-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-ExtraBold.ttf);
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fixed-header {
+    font-family: "Montserrat Alternates";
+    font-weight: 700;
+    background-color: rgba(31, 41, 55, 1);
+    padding: 13px 27px;
+  
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    &__logo {
+      color: #fff;
+      font-size: 24px;
+      line-height: 1;
+      margin: 0;
+    }
+  
+    &__nav {
+      &-list {
+        display: flex;
+        gap: 32px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+  
+      &-item {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 2;
+  
+        &--active {
+          position: relative;
+        }
+      }
+  
+      &-link {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  
+    &__auth {
+      display: flex;
+      gap: 13px;
+  
+      &-link {
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        padding: 8px 22px;
+        border-radius: 4px;
+        transition: background-color 0.3s, color 0.3s;
+  
+        &--login {
+          color: #fff;
+          border: 1px solid #fff;
+  
+          &:hover, &:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+  
+        &--register {
+          background-color: #fff;
+          color: rgba(31, 41, 55, 1);
+  
+          &:hover, &:focus {
+            background-color: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+    }
+}
+
+.login {
+  background-color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  padding: 142px 80px;
+  min-height: 100vh;
+
+  @media (max-width: 991px) {
+    padding: 100px 20px;
+  }
+
+  &__frame {
+    border-radius: 8px;
+    background-color: #1f2937;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 448px;
+    max-width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 32px 0 61px;
+
+    @media (max-width: 991px) {
+      padding: 32px 20px 61px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    align-self: center;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__form {
+    display: flex;
+    margin-top: 24px;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__label {
+    line-height: 1;
+    align-self: start;
+    margin-bottom: 8px;
+    margin-left: 16px;
+  }
+
+  &__input {
+    border-radius: 8px;
+    background-color: #374151;
+    height: 48px;
+    border: none;
+    color: #fff;
+    margin: 0 16px;
+    margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-bottom: 51px;
+    }
+  }
+
+  &__submit {
+    border-radius: 8px;
+    background-color: #2563eb;
+    font-family: Segoe UI Emoji, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 12px 45px;
+    margin: 0 16px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+    @media (max-width: 991px) {
+      padding: 12px 20px;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
