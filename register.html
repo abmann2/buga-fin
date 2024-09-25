@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="fixed-header" id="fixed-header">
+        <div class="fixed-header__container">         
+            <h1 class="fixed-header__logo">buga-fin</h1>
+            <nav class="fixed-header__nav">
+              <ul class="fixed-header__nav-list">
+                <li class="fixed-header__nav-item">
+                  <a href="./index.html" class="fixed-header__nav-link">Главная</a>
+                </li>
+                <li class="fixed-header__nav-item fixed-header__nav-item--active">
+                  <a href="./finance.html" class="fixed-header__nav-link">Финансы</a>
+                </li>
+              </ul>
+            </nav>
+          <div class="fixed-header__auth">
+            <a href="./login.html" class="fixed-header__auth-link fixed-header__auth-link--login">Login</a>
+            <a href="./register.html" class="fixed-header__auth-link fixed-header__auth-link--register">Register</a>
+          </div>
+        </div>
+    </header>
+
+    <section class="register">
+        <div class="register__container">
+          <h1 class="register__title">Buga-Fin</h1>
+          <form class="register__form">
+            <div class="register__form-group">
+              <label for="username" class="register__label">Username</label>
+              <input type="text" id="username" class="register__input" required>
+            </div>
+            <div class="register__form-group">
+              <label for="email" class="register__label">Email</label>
+              <input type="email" id="email" class="register__input" required>
+            </div>
+            <div class="register__form-group">
+              <label for="password" class="register__label">Password</label>
+              <input type="password" id="password" class="register__input" required>
+            </div>
+            <div class="register__form-group">
+              <label for="confirm-password" class="register__label">Confirm Password</label>
+              <input type="password" id="confirm-password" class="register__input" required>
+            </div>
+            <button type="submit" class="register__submit">Register</button>
+          </form>
+        </div>
+    </section>
+</body>
+</html>

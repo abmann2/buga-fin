@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/finance.css">
+    <title>Финансы</title>
+</head>
+<body>
+  <section id="add-transaction" class="add-transaction">
+    <h2 class="add-transaction__title">Добавить Транзакцию</h2>
+    <form class="add-transaction__form">
+      <div class="add-transaction__field">
+        <label for="amount" class="add-transaction__label">Сумма</label>
+        <input type="text" id="amount" class="add-transaction__input" placeholder="Введите сумму" aria-label="Введите сумму">
+      </div>
+      <div class="add-transaction__field">
+        <label for="transaction-name" class="add-transaction__label">Название Транзакции</label>
+        <input type="text" id="transaction-name" class="add-transaction__input" placeholder="Введите название транзакции" aria-label="Введите название транзакции">
+      </div>
+      <button type="submit" id="closeButton" class="add-transaction__submit">Сохранить</button>
+    </form>
+  </section>
+
+  <header class="fixed-header" id="fixed-header">
+      <div class="fixed-header__container">
+        
+          <h1 class="fixed-header__logo">buga-fin</h1>
+          <nav class="fixed-header__nav">
+            <ul class="fixed-header__nav-list">
+              <li class="fixed-header__nav-item">
+                <a href="./index.html" class="fixed-header__nav-link">Главная</a>
+              </li>
+              <li class="fixed-header__nav-item fixed-header__nav-item--active">
+                <a href="./finance.html" class="fixed-header__nav-link">Финансы</a>
+              </li>
+            </ul>
+          </nav>
+        <div class="fixed-header__auth">
+          <a href="./login.html" class="fixed-header__auth-link fixed-header__auth-link--login">Login</a>
+          <a href="./register.html" class="fixed-header__auth-link fixed-header__auth-link--register">Register</a>
+        </div>
+      </div>
+  </header>
+  
+  <section class="financial-dashboard">
+      <div class="financial-dashboard__content">
+      <div class="financial-dashboard__layout">
+          <aside class="financial-dashboard__sidebar">
+          <nav class="financial-dashboard__sidebar-menu">
+              <a href="#" class="financial-dashboard__sidebar-item">Транзакции</a>
+              <a href="#" class="financial-dashboard__sidebar-item">Графики</a>
+          </nav>
+          </aside>
+          <main class="financial-dashboard__main">
+          <div id = "financial-dashboard__main-content" class="financial-dashboard__main-content">
+              <section class="financial-dashboard__balance">
+              <h2 class="financial-dashboard__balance-title">Баланс</h2>
+              <p class="financial-dashboard__balance-amount">₽ <span class="balance">0.00</span></p>
+              </section>
+              <section id="financial-dashboard__transactions" class="financial-dashboard__transactions no-margin">
+                <div class="financial-dashboard__transactions-header">
+                    <h3 class="financial-dashboard__transactions-title">Транзакции</h3>
+                    <button  id="add-transaction-btn" class="financial-dashboard__add-transaction">
+                      <img src="./assets/img/1.svg" alt="" class="financial-dashboard__add-transaction-icon" />
+                      <span>Добавить транзакцию</span>
+                    </button>
+                </div>
+              </section>
+          </div>
+          </main>
+      </div>
+      </div>
+  </section>
+
+<script src="./assets/js/add-transaction.js"></script>
+</body>
+</html>
